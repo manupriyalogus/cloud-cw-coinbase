@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: manupriyalogus/cloud-cw-coinbase:latest
+        image: manupriyalogus/cloud-cw-coinbase-0.0.1:latest
         ports:
         - containerPort: 8080
         
