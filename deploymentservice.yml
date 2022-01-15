@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloud-cw-coinbase-deployment
+  labels:
+    app: cloud-cw-coinbase
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloud-cw-coinbase
+  template:
+    metadata:
+      labels:
+        app: cloud-cw-coinbase 
+    spec:
+      containers:
+      - name: nodeserver
+        image: manupriyalogus/cloud-cw-coinbase:latest
+        ports:
+        - containerPort: 8080
+        
+        
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-cw-coinbase-service
+spec:
+  selector:
+    app: cloud-cw-coinbase 
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 8080
