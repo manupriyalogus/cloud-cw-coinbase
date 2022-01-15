@@ -1,0 +1,6 @@
+com\example\crudwithvaadin\CustomerEditor.class
+com\example\crudwithvaadin\CustomerRepository.class
+com\example\crudwithvaadin\Customer.class
+com\example\crudwithvaadin\CrudWithVaadinApplication.class
+com\example\crudwithvaadin\CustomerEditor$ChangeHandler.class
+com\example\crudwithvaadin\MainView.class
