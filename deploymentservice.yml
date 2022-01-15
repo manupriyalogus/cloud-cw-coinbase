@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp-deployment
+  name: coinbase-deployment
   labels:
-    app: nodeapp
+    app: coinbase
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: coinbase
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: coinbase 
     spec:
       containers:
       - name: nodeserver
-        image: thetips4you/nodeapp:latest
+        image: manupriyalogus/cloud-cw-coinbase:latest
         ports:
         - containerPort: 3000
         
@@ -28,10 +28,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodeapp-service
+  name: coinbase-service
 spec:
   selector:
-    app: nodeapp 
+    app: coinbase 
   type: LoadBalancer
   ports:
   - protocol: TCP
