@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Pod
+kind: Deployment
 metadata:
   name: cloud-cw-coinbase-deployment
   labels:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: manupriyalogus/cloud-cw-coinbase-0.0.1:latest
+        image: manupriyalogus/cloud-cw-coinbase:latest
         ports:
         - containerPort: 8080
         
