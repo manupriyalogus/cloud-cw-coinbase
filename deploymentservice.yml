@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloud-cw-coinbase-deployment
+  name: cloud-cw-coinbase-deployment-test
   labels:
-    app: cloud-cw-coinbase
+    app: cloud-cw-coinbase-test
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: cloud-cw-coinbase
+      app: cloud-cw-coinbase-test
     version: blue
   template:
     metadata:
       labels:
-        app: cloud-cw-coinbase 
+        app: cloud-cw-coinbase-test
     spec:
       containers:
       - name: nodeserver
@@ -27,10 +27,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: cloud-cw-coinbase-service
+  name: cloud-cw-coinbase-service-test
 spec:
   selector:
-    app: cloud-cw-coinbase
+    app: cloud-cw-coinbase-test
     version: blue
   type: LoadBalancer
   ports:
