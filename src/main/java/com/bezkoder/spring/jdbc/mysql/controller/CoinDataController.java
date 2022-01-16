@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.ui.Model;
 import com.bezkoder.spring.jdbc.mysql.model.CoinData;
 import com.bezkoder.spring.jdbc.mysql.repository.CoinDataRepository;
 
@@ -27,6 +27,11 @@ public class CoinDataController {
 
   @Autowired
   CoinDataRepository coinDataRepository;
+
+  @GetMapping("/")
+  public String index() {
+    return "index";
+  }
 
   @GetMapping("/coinData")
   public ResponseEntity<List<CoinData>> getAllCoinData(@RequestParam(required = false) String title) {

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {font-family: "Lato", sans-serif}
+    .mySlides {display: none}
+
+    .w3-black, .w3-hover-black:hover {
+        color: #fff !important;
+        background-color: green !important;
+    }
+    .w3-padding-64 {
+        padding-top: 10px !important;
+        padding-bottom: 64px !important;
+    }
+</style>
+<body>
+
+
+<!-- The Tour Section -->
+<div class="w3-black" id="tour" style="background-color: green">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px;padding-top:10px">
+        <h2 class="w3-wide w3-center">Coinbase Exchange</h2>
+        <p class="w3-opacity w3-center"><i>Buy and Sell Bitcoin, Ethereum, and more with trust</i></p><br>
+
+        <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+            <div class="w3-third w3-margin-bottom">
+                <img src="https://st3.depositphotos.com/5906102/14454/v/450/depositphotos_144548047-stock-illustration-crypto-currency-bitcoin-golden-symbol.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Bitcoin (BTC)</b></p>
+                    <p class="w3-opacity">Change + 0.25</p>
+                    <p>Market Cap $816.6B</p>
+                    <button class="w3-button w3-black w3-margin-bottom" >Buy - $43112.66</button>
+                </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+                <img src="https://image.shutterstock.com/image-vector/crypto-currency-golden-coin-black-600w-721882771.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Ethereum (ETH)</b></p>
+                    <p class="w3-opacity">Change + 0.21</p>
+                    <p>Market Cap $396.4B</p>
+                    <button class="w3-button w3-black w3-margin-bottom" >Buy - $3226.30</button>
+                </div>
+            </div>
+            <div class="w3-third w3-margin-bottom">
+                <img src="https://cdn.shopify.com/s/files/1/0551/6686/1519/products/Solana_front_gold_1024x1024@2x.jpg?v=1632935457" alt="New York" style="width:100%" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>Solona (SOL)</b></p>
+                    <p class="w3-opacity">Change + 1.91</p>
+                    <p>Market Cap $46.6B</p>
+                    <button class="w3-button w3-black w3-margin-bottom" >Buy - $1.37</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+<script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
