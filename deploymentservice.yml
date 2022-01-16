@@ -1,11 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Pod
 metadata:
   name: cloud-cw-coinbase-deployment
   labels:
     app: cloud-cw-coinbase
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: cloud-cw-coinbase
