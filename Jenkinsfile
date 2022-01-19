@@ -35,9 +35,8 @@ pipeline {
 
     stage('Deploying App to Kubernetes') {
       steps {
-        script {
-          kubernetesDeploy(configs: "deployment.yml", kubeconfigId: "kubernetes")
-        }
+            sh 'gcloud container clusters get-credentials cw-cluster --zone us-central1-a --project eloquent-marker-338206'
+            sh 'kubectl apply -f /var/lib/jenkins/workspace/coinbase-pipline-all/deployment.yml'
       }
     }
 
