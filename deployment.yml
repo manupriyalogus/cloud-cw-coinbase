@@ -5,6 +5,7 @@ metadata:
   labels:
     app: cloud-cw-coinbase
     version: green
+
 spec:
   replicas: 3
   selector:
@@ -34,8 +35,9 @@ spec:
   selector:
     app: cloud-cw-coinbase
     version: green
+#    version: blue
   type: LoadBalancer
   ports:
   - protocol: TCP
-    port: 8080
+    port: 80
     targetPort: 8080
