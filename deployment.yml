@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: appserver
-        image: manupriyalogus/cloud-cw-coinbase:1.1.0
+        image: manupriyalogus/cloud-cw-coinbase:1.2.0
         ports:
         - containerPort: 8080
         
