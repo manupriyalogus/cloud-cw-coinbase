@@ -33,7 +33,8 @@ metadata:
 spec:
   selector:
     app: cloud-cw-coinbase
-    version: blue
+#    version: blue
+    version : green
   type: LoadBalancer
   ports:
   - protocol: TCP
